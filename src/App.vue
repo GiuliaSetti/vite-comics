@@ -3,6 +3,8 @@
     import AppNavbar from './components/AppNavbar.vue';
     // main
     import AppMain from './components/AppMain.vue';
+    // buy items
+    import AppBuy from './components/AppBuy.vue';
 
         export default {
           data() {
@@ -13,6 +15,7 @@
           components: {
             AppNavbar,
             AppMain,
+            AppBuy,
           }
     }
 
@@ -25,6 +28,9 @@
 
   <!-- main -->
   <AppMain></AppMain>
+
+  <!-- buy_items -->
+  <AppBuy></AppBuy>
 
 
 
