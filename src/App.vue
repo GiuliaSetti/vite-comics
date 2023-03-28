@@ -7,6 +7,9 @@
     import AppBuy from './components/AppBuy.vue';
     // footerup
     import AppFooterUp from './components/AppFooterUp.vue';
+    // footer
+    import AppFooter from './components/AppFooter.vue';
+
 
 
         export default {
@@ -20,6 +23,7 @@
             AppMain,
             AppBuy,
             AppFooterUp,
+            AppFooter,
           }
     }
 
@@ -39,10 +43,11 @@
   <!-- footerUp -->
   <AppFooterUp></AppFooterUp>
 
-
-
+  <!-- footer -->
+  <AppFooter></AppFooter>
 
 </template>
 
 <style lang="scss" scoped>
+
 </style>

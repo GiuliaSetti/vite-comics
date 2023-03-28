@@ -116,6 +116,10 @@
 
             </div>
 
+            <div class="button">
+                <button>Load More</button>
+            </div>
+
         </div>
 
     </main>
@@ -160,12 +164,36 @@
             }
 
             #comics{
-                padding: 4rem 1rem;
+                padding: 0 1rem;
+                padding-top: 4rem;
                 display: flex;
                 flex-flow: row wrap;
 
                 gap: 40px 20px;
             }
+
+            .button {
+
+                text-align: center;
+                padding: 2rem;
+
+
+
+
+                button{
+                    padding: 10px 45px;
+                    background-color: $mainColor;
+                    border: none;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+
+                    cursor: pointer;
+
+         
+                }
+            }
+          
 
 
             
