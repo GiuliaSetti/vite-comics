@@ -1,81 +1,24 @@
 <script>
+    export default {
+    name: "ComicItem",
+        data() {
+            return {
+            }
+        },
+        props: {
+            cover: String,
+            title: String,
+        }
+}
+
 </script>
 
 <template>
     <!-- contenitore principale -->
     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
+        <img :src="cover" alt="cover">
+        <div class="comic_title">{{ title }}</div>
     </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-       <!-- contenitore principale -->
-       <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-     <!-- contenitore principale -->
-     <div class="comic">
-        <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="uno">
-        <div class="comic_title">Titolo</div>
-    </div>
-
-
-    
 
 </template>
 

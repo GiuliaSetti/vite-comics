@@ -112,7 +112,7 @@
             <div id="comics">
 
                 <!-- singolo fumetto -->
-                <ComicItem></ComicItem>
+                <ComicItem v-for="comic in comics"  :cover="comic.thumb" :title="comic.series"></ComicItem>
 
             </div>
 
