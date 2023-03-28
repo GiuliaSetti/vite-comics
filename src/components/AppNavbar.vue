@@ -34,25 +34,30 @@
 
 <template>
 
-    <nav class="centered">
-            
-        <div id="nav_left">
+    <nav >
 
-            <div id="logo_container">
+        <div class="nav_content centered">
 
-                <img src="/img/dc-logo.png" alt="logo">
+            <div id="nav_left">
+
+                <div id="logo_container">
+
+                    <img src="/img/dc-logo.png" alt="logo">
+
+                </div>
+
+            </div>
+
+            <div id="nav_right">
+
+                <ul>
+                    <li v-for="(link, index) in links" class="link" :class="currentIndex == index ? 'active' : ''" @click="indexUp(index)"><a href="#">{{ link }}</a></li>
+                </ul>
 
             </div>
 
         </div>
-
-        <div id="nav_right">
-
-            <ul>
-                <li v-for="(link, index) in links" class="link" :class="currentIndex == index ? 'active' : ''" @click="indexUp(index)"><a href="#">{{ link }}</a></li>
-            </ul>
-
-        </div>
+       
 
     </nav>
 
@@ -65,13 +70,20 @@
     @use "../scss/variables" as *;
 
     nav{
-        height: 90px;
-        padding: 1rem;
+        
+        position: fixed;
+        background-color: white;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 100vw;
+        height: 85px;
+       
 
+        .nav_content{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
         #nav_left{
             #logo_container{
                 width: 70px;
@@ -107,7 +119,7 @@
                                 content: '';
 
                                 width: 100%;
-                                height: 4px;
+                                height: 3px;
                             
                                 background-color: $mainColor;
 
@@ -120,6 +132,13 @@
             }
 
         }
+
+
+        }
+        
+      
+
+
 
 
 

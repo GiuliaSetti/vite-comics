@@ -1,6 +1,9 @@
 <script>
-
+    // navbar
     import AppNavbar from './components/AppNavbar.vue';
+    // main
+    import AppMain from './components/AppMain.vue';
+
         export default {
           data() {
             return {
@@ -8,8 +11,8 @@
             }
           },
           components: {
-          
-            AppNavbar
+            AppNavbar,
+            AppMain,
           }
     }
 
@@ -17,7 +20,14 @@
 
 <template>
 
+  <!-- navbar -->
   <AppNavbar></AppNavbar>
+
+  <!-- main -->
+  <AppMain></AppMain>
+
+
+
 
 </template>
 
