@@ -5,6 +5,9 @@
     import AppMain from './components/AppMain.vue';
     // buy items
     import AppBuy from './components/AppBuy.vue';
+    // footerup
+    import AppFooterUp from './components/AppFooterUp.vue';
+
 
         export default {
           data() {
@@ -16,6 +19,7 @@
             AppNavbar,
             AppMain,
             AppBuy,
+            AppFooterUp,
           }
     }
 
@@ -31,6 +35,9 @@
 
   <!-- buy_items -->
   <AppBuy></AppBuy>
+
+  <!-- footerUp -->
+  <AppFooterUp></AppFooterUp>
 
 
 
