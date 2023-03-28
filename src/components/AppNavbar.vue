@@ -1,91 +1,129 @@
 <script>
+    export default {
+    name: "AppNav",
+        data() {
+            return {
+                links: [
+                    'characters',
+                    'comics',
+                    'movies',    
+                    'tv',
+                    'games',
+                    'collectibles',
+                    'videos',
+                    'fans',
+                    'news',
+                    'shop',
+                ],
 
-export default{
-    data(){
-      return{
+                currentIndex: 1,
+            }
+        },
 
-        links:[
-          "Character",
-          "Comics",
-          "Movies",
-          "tv",
-          "games",
-          "collectibles",
-          "videos",
-          "fans",
-          "news",
-          "shop"
-        ]
-
-
-
-      }
-  }
-}
-
+        methods: {
+            indexUp(upIndex) {
+                
+                this.currentIndex = upIndex;  
+                console.log(upIndex)
+            }
+            
+        }
+    }
 </script>
 
+
 <template>
-  <!-- header -->
-    <header>
 
-      <!-- navbar -->
-      <nav class="centered">
+    <nav class="centered">
+            
+        <div id="nav_left">
 
+            <div id="logo_container">
 
-        <!-- navleft -->
-        <div class="nav_left">
-          <img src="public/img/dc-logo.png" alt="">
+                <img src="/img/dc-logo.png" alt="logo">
+
+            </div>
+
         </div>
 
-        <!-- navright -->
-        <div class="nav_right">
-          <ul>
-            <li v-for="link in links">{{link}}</li>
-          </ul>
+        <div id="nav_right">
+
+            <ul>
+                <li v-for="(link, index) in links" class="link" :class="currentIndex == index ? 'active' : ''" @click="indexUp(index)"><a href="#">{{ link }}</a></li>
+            </ul>
+
         </div>
 
-      </nav>
-    </header>
+    </nav>
+
 
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-  nav{
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @use "../scss/variables" as *;
 
-  
+    nav{
+        height: 90px;
+        padding: 1rem;
 
-    img{
-      width: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #nav_left{
+            #logo_container{
+                width: 70px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+        }
+
+        #nav_right{
+            
+            ul {
+                display: flex;
+                gap: 20px;
+                color: #464646;
+
+                li{
+                    position: relative;
+                    padding: 2rem 0;
+                    
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                        &.active {
+                        color: $mainColor;
+                        
+                            &::before {
+                                content: '';
+
+                                width: 100%;
+                                height: 4px;
+                            
+                                background-color: $mainColor;
+
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    
+                }
+            }
+
+        }
+
+
+
     }
-
-    
-    ul{
-      display: flex;
-
-      li{
-      padding: 25px 15px;
-      text-transform: uppercase;
-
-      color: gray;
-      font-weight: bold;
-      }
-
-
-      li:hover{
-        color: rgb(25, 116, 244);
-        border-bottom: 2px solid  rgb(25, 116, 244);
-      }
-
-    }
-  }
-
 
 
 </style>
