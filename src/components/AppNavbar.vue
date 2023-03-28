@@ -72,6 +72,7 @@
     nav{
         
         position: fixed;
+        z-index: 1;
         background-color: white;
 
         width: 100vw;
